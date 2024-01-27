@@ -172,12 +172,14 @@ nav a:hover {
 /* Example for adding a faded background image to the CSE 15L box */
 .cse-15l {
 background-image: linear-gradient(to top, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.3)),
+background-blend-mode: multiply;
 url('https://mapersiani.github.io/home/terminal.png'); /* Path to your image */
 }
 
 /* Example for adding a faded background image to the ECE 176 box */
 .ece-176 {
 background-image: linear-gradient(to top, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.3)),
+background-blend-mode: multiply;
 url('https://mapersiani.github.io/home/deeplearning.png'); /* Path to your image */
 }
 
