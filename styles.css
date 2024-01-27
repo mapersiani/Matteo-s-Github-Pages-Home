@@ -140,7 +140,7 @@ align-items: center; /* Center the content vertically and horizontally */
 /* Example for adding a faded background image to the CSE 15L box */
 .cse-15l {
 background-image: linear-gradient(to top, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3)),
-url('path-to-your-cse-15l-image.jpg'); /* Path to your image */
+url('tempProfile.jpg'); /* Path to your image */
 }
 
 /* Example for adding a faded background image to the ECE 176 box */
