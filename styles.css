@@ -1,100 +1,86 @@
+/* Define the color palette */
+:root {
+  --primary-color: #f4a261; /* Example: a warm, sandy orange */
+  --secondary-color: #2a9d8f; /* Example: a calm, teal green */
+  --accent-color: #e9c46a; /* Example: a soft, amber yellow */
+  --text-color: #264653; /* Example: a dark blue-grey */
+  --background-color: #ffffff; /* White background for contrast */
+}
+
+/* Apply global font */
 body {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    background: #fff;
-    color: #333;
+  font-family: 'Poppins', sans-serif;
+  color: var(--text-color);
+  background-color: var(--background-color);
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
 }
 
-header {
-    background: #f8f8f8;
-    padding: 20px 10%;
-    border-bottom: 2px solid #eaeaea;
+/* Utility classes for margins and padding */
+.margin-md {
+  margin: 1rem;
 }
 
-nav {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
+.padding-md {
+  padding: 1rem;
 }
 
-nav a {
-    color: #333;
-    text-decoration: none;
-    margin-left: 20px;
-    font-weight: bold;
-    font-size: 0.9em;
-    text-transform: uppercase;
+/* Style for headers and sections */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--primary-color);
 }
 
-nav a.hire-me {
-    padding: 10px 20px;
-    background: black;
-    color: white;
-    border-radius: 20px;
-    transition: background-color 0.3s ease;
+section {
+  margin: 2rem 5%;
 }
 
-nav a.hire-me:hover {
-    background: #333;
+/* Style for buttons and interactive elements */
+button, a {
+  background-color: var(--secondary-color);
+  color: var(--background-color);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-main {
-    max-width: 800px;
-    margin: 50px auto;
-    padding: 0 20px;
+button:hover, a:hover {
+  background-color: var(--accent-color);
 }
 
-.intro {
-    text-align: center;
-    margin-bottom: 50px;
+/* Style for images and icons */
+img, .icon {
+  max-width: 100%;
+  height: auto;
 }
 
-.intro h1 {
-    color: #000;
-    font-size: 2.5em;
-    margin-bottom: 10px;
+/* Style for personal bio and callouts */
+.bio, .call-out {
+  border: 1px solid var(--primary-color);
+  padding: 20px;
+  border-radius: 8px;
+  background-color: var(--background-color);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.intro p {
-    font-size: 1.1em;
-    margin-bottom: 20px;
+/* Style for testimonials and social proof */
+.testimonials, .collaborators {
+  padding: 20px;
+  border-left: 4px solid var(--accent-color);
 }
 
-.intro a.email-link {
-    color: #333;
-    text-decoration: none;
-    font-size: 1em;
-    font-weight: bold;
+/* Responsive design for different screen sizes */
+@media (max-width: 768px) {
+  .padding-md {
+    padding: 0.5rem;
+  }
+
+  .margin-md {
+    margin: 0.5rem;
+  }
 }
 
-.featured-work > h2 {
-    font-size: 1.5em;
-    text-transform: uppercase;
-    margin-bottom: 30px;
-}
-
-.project {
-    margin-bottom: 30px;
-}
-
-.project h3 {
-    font-size: 1.2em;
-    color: #333;
-}
-
-.project p {
-    margin-bottom: 10px;
-}
-
-footer {
-    text-align: center;
-    padding: 10px 0;
-    background: #f8f8f8;
-    border-top: 2px solid #eaeaea;
-}
-
-footer p {
-    color: #666;
-    font-size: 0.8em;
-}
+/* Import Google Font 'Poppins' */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
