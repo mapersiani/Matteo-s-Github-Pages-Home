@@ -1,17 +1,15 @@
-/* Reset some basic elements */
+/* General styles */
 body, h1, h2, h3, p, a {
     margin: 0;
     padding: 0;
     text-decoration: none;
+    font-family: 'Arial', sans-serif;
 }
 
-/* Apply a font similar to the one in the screenshot, if available */
 body {
-    font-family: 'Arial', sans-serif;
     line-height: 1.6;
     color: #333;
     background-color: #f4f4f4;
-    margin: 0;
     padding: 20px;
 }
 
@@ -35,14 +33,9 @@ nav a {
 
 .contact-me {
     background-color: #4CAF50; /* Green */
-    border: none;
     color: white;
     padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
+    border-radius: 20px; /* Rounded corners for bubbly effect */
     cursor: pointer;
 }
 
@@ -52,31 +45,42 @@ nav a {
     padding: 0 20px;
 }
 
+/* Introduction bubble */
 .intro {
+    background: #fff;
     text-align: center;
     margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 30px; /* Rounded corners for bubbly effect */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1); /* Subtle shadow */
 }
 
 .intro h1 {
     color: #333;
+    margin-bottom: 10px;
 }
 
 .intro p {
     font-style: italic;
+    margin-bottom: 10px;
 }
 
 .email-link {
     color: #333;
     background-color: #ddd;
     padding: 10px 20px;
+    border-radius: 20px; /* Rounded corners for bubbly effect */
     display: inline-block;
     margin-top: 20px;
 }
 
+/* Featured Work bubbles */
 .featured-work {
     background: #fff;
     padding: 20px;
     margin: 20px 0;
+    border-radius: 20px; /* Rounded corners for bubbly effect */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1); /* Subtle shadow */
 }
 
 .featured-work h2 {
@@ -90,6 +94,7 @@ nav a {
 
 .class-work h3 {
     color: #333;
+    margin-bottom: 10px;
 }
 
 .class-work p {
@@ -100,10 +105,12 @@ nav a {
     color: #333;
     background-color: #ddd;
     padding: 5px 10px;
+    border-radius: 15px; /* Rounded corners for bubbly effect */
     display: inline-block;
     margin-top: 10px;
 }
 
+/* Footer */
 footer {
     text-align: center;
     padding: 20px 0;
