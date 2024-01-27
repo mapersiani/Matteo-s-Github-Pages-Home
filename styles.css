@@ -18,14 +18,13 @@ body {
 header {
     background: #005792; /* A shade of blue */
     color: #fff;
-    padding: 20px 40px;
+    padding: 20px 40px; /* Adjusted padding for overall header */
 }
 
 nav {
     display: flex;
     justify-content: flex-end; /* Aligns the navigation items to the right */
     align-items: center; /* Centers the items vertically */
-    height: 100%; /* Ensures the nav takes the full height of the header */
 }
 
 nav a {
@@ -43,21 +42,17 @@ nav a:hover {
 
 .contact-me {
     background-color: #FFA500; /* Orange */
-    border: none;
     color: white;
+    border: none;
     padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-    border-radius: 5px; /* Slightly rounded edges for the button */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
 }
 
 .contact-me:hover {
     background-color: #e69500; /* Darker orange on hover for 'Contact Me' button */
 }
+
 .main {
     max-width: 900px;
     margin: 40px auto;
@@ -76,37 +71,53 @@ nav a:hover {
     border-left: 5px solid #005792; /* Blue border on the left */
 }
 
-/* Intro bubble */
+/* Styling for the introduction section with the image */
 .intro {
-    text-align: center;
-    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    text-align: left;
+    gap: 20px; /* Adjust the space between the image and text */
 }
 
-.intro h1 {
-    color: #005792; /* Blue color for the name */
+.intro-left {
+    flex-shrink: 0; /* Prevents the image container from shrinking */
 }
 
-.intro p {
-    font-style: italic;
-    color: #555; /* Darker grey for the text */
+.intro-right {
+    flex-grow: 1; /* Allows the text container to grow and fill the space */
 }
 
-.email-link {
-    color: #fff;
-    background-color: #FFA500; /* Orange background */
-    padding: 10px 20px;
-    display: inline-block;
-    margin-top: 20px;
-    border-radius: 5px; /* Slightly rounded edges for the button */
+.profile-pic {
+    border-radius: 50%; /* Makes the image round */
+    width: 150px; /* Adjust the size as needed */
+    height: 150px; /* Adjust the size as needed */
+    object-fit: cover; /* Ensures the image covers the area without distortion */
 }
 
-/* Featured Work section with color */
+/* Styling for the featured works to be side by side */
+section {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Allows items to wrap to the next line on smaller screens */
+}
+
+.class-work {
+    width: calc(50% - 10px); /* Adjust width to accommodate 2 side by side, considering the margin */
+    margin-right: 10px; /* Spacing between the two works */
+    margin-bottom: 20px; /* Spacing between rows */
+}
+
+.class-work:last-child {
+    margin-right: 0;
+}
+
+/* Styling for featured work headers */
 .featured-work h2 {
     color: #FFA500; /* Orange color for headers */
     margin-bottom: 10px;
 }
 
-/* Class work bubbles */
+/* Styling for the class work sections */
 .class-work h3 {
     color: #005792; /* Blue color for the class work headers */
 }
@@ -139,6 +150,4 @@ footer {
 /* Hover effect for bubbles */
 .bubble:hover {
     transform: scale(1.03);
-    box-shadow: 0 12px 24px rgba(0,0,0,0.2);
-}
-
+    box-shadow: 
