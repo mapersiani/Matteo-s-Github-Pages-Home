@@ -1,53 +1,70 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     line-height: 1.6;
     margin: 0;
-    padding: 0;
-    background: #f4f4f4;
+    color: #333;
 }
 
 header {
-    background: #333;
-    color: #fff;
+    background: #fff;
     padding: 10px 0;
+    text-align: right;
+    border-bottom: 1px solid #eaeaea;
+}
+
+header nav a {
+    margin-right: 20px;
+    color: #333;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+main {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.intro {
     text-align: center;
 }
 
-header h1 {
-    margin: 0;
+.intro h1 {
+    color: #000;
+    margin-bottom: 10px;
 }
 
-nav ul {
-    padding: 0;
-    list-style: none;
+.intro p {
+    font-size: 1.2em;
+    line-height: 1.5em;
 }
 
-nav ul li {
-    display: inline;
-    margin-right: 20px;
+.featured-work h2 {
+    margin-top: 50px;
+    text-transform: uppercase;
 }
 
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
+article {
+    margin-bottom: 30px;
 }
 
-section {
-    padding: 20px;
-    margin: 0 10%;
+article h3 {
+    font-size: 1.5em;
+    color: #333;
+}
+
+article p {
+    margin-bottom: 10px;
 }
 
 footer {
     text-align: center;
-    padding: 20px;
-    background: #333;
-    color: #fff;
-    position: relative;
-    bottom: 0;
-    width: 100%;
+    padding: 20px 0;
+    background: #f8f8f8;
+    border-top: 1px solid #eaeaea;
 }
 
-footer a {
-    color: #fff;
-    text-decoration: none;
+footer p {
+    color: #666;
 }
