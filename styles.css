@@ -101,43 +101,50 @@ section {
     flex-wrap: wrap; /* Allows items to wrap to the next line on smaller screens */
 }
 
+.featured-work {
+    display: flex;
+    justify-content: space-around; /* Distributes space evenly around the items */
+    flex-wrap: wrap; /* Allows items to wrap to the next line on smaller screens */
+    gap: 20px; /* Spacing between the boxes */
+}
+
 .class-work {
-    width: calc(50% - 10px); /* Adjust width to accommodate 2 side by side, considering the margin */
-    margin-right: 10px; /* Spacing between the two works */
-    margin-bottom: 20px; /* Spacing between rows */
+    flex: 1; /* Allows boxes to grow and take up equal space */
+    min-width: calc(50% - 20px); /* Sets minimum width for side by side view */
+    background-size: cover; /* Ensures the background image covers the entire element */
+    background-position: center; /* Centers the background image */
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+    overflow: hidden; /* Prevents content from spilling out */
+    display: flex; /* Makes it a flex container to center the content */
+    justify-content: center; /* Centers content horizontally */
+    align-items: center; /* Centers content vertically */
+    height: 150px; /* Set a fixed height for each box */
+    border-radius: 10px; /* Rounded corners for the boxes */
+    position: relative; /* For absolute positioning of the description inside */
 }
 
-.class-work:last-child {
-    margin-right: 0;
+.class-work:hover .description {
+    display: block; /* Shows the description on hover */
 }
 
-/* Styling for featured work headers */
-.featured-work h2 {
-    color: #FFA500; /* Orange color for headers */
-    margin-bottom: 10px;
+.description {
+    display: none; /* Hides the description by default */
+    position: absolute; /* Absolutely positions the description */
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
+    width: 100%;
+    height: 100%;
+    text-align: center; /* Center the text */
+    border-radius: 10px; /* Rounded corners for the description box */
 }
 
-/* Styling for the class work sections */
-.class-work h3 {
-    color: #005792; /* Blue color for the class work headers */
+/* Example for adding a background image to the CSE 15L box */
+.cse-15l {
+    background-image: url('path-to-your-cse-15l-image.jpg'); /* Path to your image */
 }
 
-.class-work p {
-    display: none;
-    color: #666;
-}
-
-.class-work a {
-    display: none;
-}
-
-.class-work:hover p,
-.class-work:hover a {
-    display: block;
-}
-
-.class-work:hover {
-    background-color: #f9f9f9;
+/* Example for adding a background image to the ECE 176 box */
+.ece-176 {
+    background-image: url('path-to-your-ece-176-image.jpg'); /* Path to your image */
 }
 
 footer {
