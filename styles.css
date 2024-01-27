@@ -1,15 +1,17 @@
-/* General styles */
+/* Reset some basic elements */
 body, h1, h2, h3, p, a {
     margin: 0;
     padding: 0;
     text-decoration: none;
-    font-family: 'Arial', sans-serif;
 }
 
+/* Apply a font and basic styling */
 body {
+    font-family: 'Arial', sans-serif;
     line-height: 1.6;
     color: #333;
     background-color: #f4f4f4;
+    margin: 0;
     padding: 20px;
 }
 
@@ -17,7 +19,6 @@ header {
     background: #333;
     color: #fff;
     padding: 20px 0;
-    text-align: center;
 }
 
 nav {
@@ -33,9 +34,14 @@ nav a {
 
 .contact-me {
     background-color: #4CAF50; /* Green */
+    border: none;
     color: white;
     padding: 10px 20px;
-    border-radius: 20px; /* Rounded corners for bubbly effect */
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
     cursor: pointer;
 }
 
@@ -45,42 +51,43 @@ nav a {
     padding: 0 20px;
 }
 
-/* Introduction bubble */
-.intro {
+/* Bubble styling */
+.bubble {
     background: #fff;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+/* Intro bubble */
+.intro {
     text-align: center;
     margin-bottom: 20px;
-    padding: 20px;
-    border-radius: 30px; /* Rounded corners for bubbly effect */
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1); /* Subtle shadow */
 }
 
 .intro h1 {
     color: #333;
-    margin-bottom: 10px;
 }
 
 .intro p {
     font-style: italic;
-    margin-bottom: 10px;
 }
 
 .email-link {
     color: #333;
     background-color: #ddd;
     padding: 10px 20px;
-    border-radius: 20px; /* Rounded corners for bubbly effect */
     display: inline-block;
     margin-top: 20px;
 }
 
-/* Featured Work bubbles */
+/* Featured Work bubble */
 .featured-work {
-    background: #fff;
-    padding: 20px;
-    margin: 20px 0;
-    border-radius: 20px; /* Rounded corners for bubbly effect */
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1); /* Subtle shadow */
+    text-align: center;
+    cursor: pointer;
 }
 
 .featured-work h2 {
@@ -88,32 +95,44 @@ nav a {
     margin-bottom: 10px;
 }
 
+/* Class work bubbles */
 .class-work {
+    text-align: center;
     margin-bottom: 20px;
+    position: relative;
 }
 
 .class-work h3 {
     color: #333;
-    margin-bottom: 10px;
 }
 
 .class-work p {
-    margin-bottom: 10px;
+    display: none;
+    color: #666;
 }
 
 .class-work a {
-    color: #333;
-    background-color: #ddd;
-    padding: 5px 10px;
-    border-radius: 15px; /* Rounded corners for bubbly effect */
-    display: inline-block;
-    margin-top: 10px;
+    display: none;
 }
 
-/* Footer */
+.class-work:hover p,
+.class-work:hover a {
+    display: block;
+}
+
+.class-work:hover {
+    background-color: #f9f9f9;
+}
+
 footer {
     text-align: center;
     padding: 20px 0;
     background: #333;
     color: #fff;
+}
+
+/* Hover effect for bubbles */
+.bubble:hover {
+    transform: scale(1.03);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.2);
 }
