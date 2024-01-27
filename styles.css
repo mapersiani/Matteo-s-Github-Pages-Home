@@ -11,13 +11,12 @@ body {
     line-height: 1.6;
     color: #333;
     background-color: #f4f4f4; /* Light grey background */
-    margin: 0;
     padding: 20px;
 }
 
 header {
     background: #005792; /* A shade of blue */
-    color: #fff;
+    color: white;
     padding: 20px 40px; /* Adjusted padding for overall header */
 }
 
@@ -94,13 +93,7 @@ nav a:hover {
     object-fit: cover; /* Ensures the image covers the area without distortion */
 }
 
-/* Styling for the featured works to be side by side */
-section {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap; /* Allows items to wrap to the next line on smaller screens */
-}
-
+/* Styling for the featured work section */
 .featured-work {
     display: flex;
     justify-content: space-around; /* Distributes space evenly around the items */
@@ -130,31 +123,40 @@ section {
 .description {
     display: none; /* Hides the description by default */
     position: absolute; /* Absolutely positions the description */
+    background-color:
     background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
     width: 100%;
     height: 100%;
     text-align: center; /* Center the text */
+    padding: 20px; /* Padding inside the description */
     border-radius: 10px; /* Rounded corners for the description box */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 /* Example for adding a background image to the CSE 15L box */
 .cse-15l {
-    background-image: url('path-to-your-cse-15l-image.jpg'); /* Path to your image */
+    background-image: url('tempProfile.jpg'); /* Path to your image */
 }
 
 /* Example for adding a background image to the ECE 176 box */
 .ece-176 {
-    background-image: url('path-to-your-ece-176-image.jpg'); /* Path to your image */
+    background-image: url('tempProfile.jpg'); /* Path to your image */
 }
+
+/* Rest of the CSS for other elements... */
 
 footer {
     text-align: center;
     padding: 20px 0;
     background: #005792; /* Blue background */
-    color: #fff;
+    color: white;
+    margin-top: 20px; /* Ensures space before the footer */
 }
 
 /* Hover effect for bubbles */
 .bubble:hover {
     transform: scale(1.03);
-    box-shadow: 
+    box-shadow: 0 12px 24px rgba(0,0,0,0.2);
+}
