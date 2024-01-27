@@ -10,13 +10,14 @@ body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
     color: #333;
-    background-color: #f4f4f4;
+    background-color: #f4f4f4; /* Light grey background */
     margin: 0;
     padding: 20px;
 }
 
 header {
-    background: #333;
+    background: #005792; /* A shade of blue */
+    color: #fff;
     padding: 20px 0;
 }
 
@@ -27,13 +28,13 @@ nav {
 }
 
 nav a {
-    color: #fff;
+    color: #FFA500; /* Orange color for the text */
     font-weight: bold;
     margin-left: 20px; /* This will give space between each link */
 }
 
 .contact-me {
-    background-color: #4CAF50; /* Green */
+    background-color: #FFA500; /* Orange */
     border: none;
     color: white;
     padding: 10px 20px;
@@ -43,6 +44,7 @@ nav a {
     font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;
+    border-radius: 5px; /* Slightly rounded edges for the button */
 }
 
 .main {
@@ -51,7 +53,7 @@ nav a {
     padding: 0 20px;
 }
 
-/* Bubble styling */
+/* Bubble styling with blue and orange accents */
 .bubble {
     background: #fff;
     border-radius: 20px;
@@ -60,6 +62,7 @@ nav a {
     box-shadow: 0 8px 16px rgba(0,0,0,0.1);
     transition: all 0.3s ease;
     overflow: hidden;
+    border-left: 5px solid #005792; /* Blue border on the left */
 }
 
 /* Intro bubble */
@@ -69,41 +72,32 @@ nav a {
 }
 
 .intro h1 {
-    color: #333;
+    color: #005792; /* Blue color for the name */
 }
 
 .intro p {
     font-style: italic;
+    color: #555; /* Darker grey for the text */
 }
 
 .email-link {
-    color: #333;
-    background-color: #ddd;
+    color: #fff;
+    background-color: #FFA500; /* Orange background */
     padding: 10px 20px;
     display: inline-block;
     margin-top: 20px;
+    border-radius: 5px; /* Slightly rounded edges for the button */
 }
 
-/* Featured Work bubble */
-.featured-work {
-    text-align: center;
-    cursor: pointer;
-}
-
+/* Featured Work section with color */
 .featured-work h2 {
-    color: #333;
+    color: #FFA500; /* Orange color for headers */
     margin-bottom: 10px;
 }
 
 /* Class work bubbles */
-.class-work {
-    text-align: center;
-    margin-bottom: 20px;
-    position: relative;
-}
-
 .class-work h3 {
-    color: #333;
+    color: #005792; /* Blue color for the class work headers */
 }
 
 .class-work p {
@@ -127,7 +121,7 @@ nav a {
 footer {
     text-align: center;
     padding: 20px 0;
-    background: #333;
+    background: #005792; /* Blue background */
     color: #fff;
 }
 
@@ -136,3 +130,4 @@ footer {
     transform: scale(1.03);
     box-shadow: 0 12px 24px rgba(0,0,0,0.2);
 }
+
