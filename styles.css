@@ -96,11 +96,16 @@ nav a:hover {
 /* Styling for the featured work section */
 .featured-work {
     display: flex;
-    flex-direction: row; /* Align items in a row */
-    justify-content: start; /* Align items to the start of the container */
-    align-items: center; /* Center items vertically */
-    gap: 20px; /* Spacing between the boxes */
-    flex-wrap: nowrap; /* Prevent wrapping to a new line */
+    flex-direction: column; /* Stack the heading and the work container vertically */
+    align-items: center; /* Center items horizontally */
+    gap: 20px; /* Spacing between the heading and the work container */
+}
+
+.work-container {
+    display: flex;
+    justify-content: space-evenly; /* Space out the class-work items evenly */
+    flex-wrap: wrap; /* Allow the items to wrap on smaller screens */
+    gap: 20px; /* Spacing between the class-work items */
 }
 
 .class-work {
