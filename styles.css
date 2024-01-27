@@ -18,19 +18,27 @@ body {
 header {
     background: #005792; /* A shade of blue */
     color: #fff;
-    padding: 20px 0;
+    padding: 20px 40px;
 }
 
 nav {
     display: flex;
     justify-content: flex-end; /* Aligns the navigation items to the right */
-    padding-right: 20px; /* Adds some padding on the right */
+    align-items: center; /* Centers the items vertically */
+    height: 100%; /* Ensures the nav takes the full height of the header */
 }
 
 nav a {
     color: #FFA500; /* Orange color for the text */
     font-weight: bold;
     margin-left: 20px; /* This will give space between each link */
+    padding: 8px 16px; /* Padding to make the links appear as buttons */
+    border-radius: 5px; /* Slightly rounded corners for the links */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+nav a:hover {
+    background-color: #ffa5002b; /* Slight orange background on hover */
 }
 
 .contact-me {
@@ -47,6 +55,9 @@ nav a {
     border-radius: 5px; /* Slightly rounded edges for the button */
 }
 
+.contact-me:hover {
+    background-color: #e69500; /* Darker orange on hover for 'Contact Me' button */
+}
 .main {
     max-width: 900px;
     margin: 40px auto;
