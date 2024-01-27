@@ -118,35 +118,36 @@ nav a:hover {
     position: relative; /* For absolute positioning of the description inside */
 }
 
-.class-work:hover .description {
-    display: flex; /* Shows the description on hover and uses flexbox to center the content */
+/* This CSS class hides the description by default */
+.description {
+    display: none; /* Hides the description */
+    position: absolute; /* Absolutely positions the description */
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
+    width: 100%;
+    height: 100%;
+    text-align: center; /* Center the text */
+    padding: 20px; /* Padding inside the description */
+    border-radius: 10px; /* Rounded corners for the description box */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* Center the content vertically and horizontally */
 }
 
-.description {
-display: none; /* Hides the description by default */
-position: absolute; /* Absolutely positions the description */
-background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
-width: 100%;
-height: 100%;
-text-align: center; /* Center the text */
-padding: 20px; /* Padding inside the description */
-border-radius: 10px; /* Rounded corners for the description box */
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center; /* Center the content vertically and horizontally */
+/* This CSS rule will display the description when the user hovers over the .class-work container */
+.class-work:hover .description {
+    display: flex; /* Shows the description on hover */
 }
 
 /* Example for adding a faded background image to the CSE 15L box */
 .cse-15l {
 background-image: linear-gradient(to top, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3)),
-url('terminal.jpg'); /* Path to your image */
+url('../terminal.jpg'); /* Path to your image */
 }
 
 /* Example for adding a faded background image to the ECE 176 box */
 .ece-176 {
 background-image: linear-gradient(to top, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3)),
-url('deeplearning.jpg'); /* Path to your image */
+url('../deeplearning.jpg'); /* Path to your image */
 }
 
 footer {
