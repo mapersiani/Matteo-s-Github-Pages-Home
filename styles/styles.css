@@ -171,7 +171,7 @@ nav a:hover {
 
 /* Example for adding a faded background image to the CSE 15L box */
 .cse-15l {
-background-image: linear-gradient(to top, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.3)),
+background-image: linear-gradient(to top, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)),
 url('https://mapersiani.github.io/home/images/terminal.png'); /* Path to your image */
 }
 
