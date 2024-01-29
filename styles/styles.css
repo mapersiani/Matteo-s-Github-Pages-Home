@@ -180,9 +180,8 @@ url('https://mapersiani.github.io/home/images/deeplearning.png'); /* Path to ima
 }
 
 .cse-190 {
-background-image: linear-gradient(to top, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.3)),
-url('https://mapersiani.github.io/home/images/qcrypt.png'); /* Path image */
-/*filter: contrast(120%) brightness(110%);*/
+background-image: url('https://mapersiani.github.io/home/images/qcrypt.png'); /* Path image */
+filter: contrast(120%) brightness(110%);
 }
 
 footer {
