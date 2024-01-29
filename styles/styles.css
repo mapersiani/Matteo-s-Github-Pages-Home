@@ -210,55 +210,73 @@ box-shadow: 0 12px 24px rgba(0,0,0,0.2);
     /* Mobile-specific styles */
     .hamburger-menu {
         display: block;
+        /* Additional styling for the hamburger icon */
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        z-index: 100; /* to ensure it's on top of other elements */
     }
 
     nav {
         display: none;
+        position: absolute;
+        top: 60px; /* Adjust as needed */
+        right: 0;
+        width: 100%; /* Full width */
+        background: #005792; /* To match header background */
+        z-index: 99; /* Below the hamburger icon */
     }
 
     nav a, .contact-me {
         padding: 15px 30px;
         font-size: 18px;
+        display: block; /* Stack links vertically */
+        text-align: center; /* Center-align the text */
     }
     
     .profile-pic {
         width: 100px;
         height: 100px;
+        margin: 0 auto; /* Center the image */
     }
 
     body {
-        font-size: 16px; /* Adjust as needed */
+        font-size: 16px; /* Smaller font size for mobile */
     }
 
     h1, h2, h3 {
-        font-size: larger;
+        font-size: 1.5em; /* Larger, but not too large */
+        text-align: center; /* Center-align headings */
     }
 
     .class-work {
-        /* Adjustments for the size, layout, etc., as needed */
+        width: 100%; /* Full width on mobile */
+        margin: 10px 0; /* Adjusted margins */
     }
 
-    /* Make content and links visible and adjust their layout */
     .class-work .content, .class-work .links {
-        display: block; /* Ensure they are always visible */
+        display: block; /* Always visible */
         opacity: 1;
         visibility: visible;
-        position: relative; /* Adjust position as needed */
-        width: auto; /* Adjust width to fit mobile screen */
-        height: auto; /* Adjust height as necessary */
-        /* Add any additional styling for mobile layout */
+        position: relative;
+        width: auto;
+        height: auto;
+        padding: 10px; /* Added padding for touch friendliness */
     }
 
-    /* You might need to adjust the layout within .content and .links */
-    /* For example, if you want titles and descriptions to appear above the links */
     .class-work .content h3, .class-work .content p {
-        /* Styling for titles and descriptions */
+        font-size: 1em; /* Adjust font size for readability */
+        margin-bottom: 10px; /* Space between title, description, and links */
     }
 
     .class-work .links a {
-        /* Styling for links */
-        display: inline-block; /* or 'block' if you want each link on a new line */
-        margin: 5px; /* Adjust spacing around links */
-        /* Additional link styling as needed */
+        display: inline-block;
+        margin: 5px;
+        font-size: 0.9em; /* Slightly smaller font size for links */
+        background-color: #f4f4f4; /* Light background for links */
+        color: #005792; /* Link color */
+        padding: 5px 10px; /* Padding for easier touch */
+        border-radius: 5px; /* Rounded corners for aesthetics */
+        text-decoration: none; /* No underline */
     }
 }
