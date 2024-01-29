@@ -197,3 +197,32 @@ margin-top: 20px; /* Ensures space before the footer */
 transform: scale(1.03);
 box-shadow: 0 12px 24px rgba(0,0,0,0.2);
 }
+
+@media only screen and (max-width: 600px) {
+    /* Mobile-specific styles */
+    .hamburger-menu {
+        display: block;
+    }
+
+    nav {
+        display: none;
+    }
+
+    nav a, .contact-me {
+        padding: 15px 30px;
+        font-size: 18px;
+    }
+    
+    .profile-pic {
+        width: 100px;
+        height: 100px;
+    }
+
+    body {
+        font-size: 16px; /* Adjust as needed */
+    }
+
+    h1, h2, h3 {
+        font-size: larger;
+    }
+}
