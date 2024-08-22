@@ -1,137 +1,230 @@
-/* Reset some basic elements */
-body, h1, h2, h3, p, a {
-    margin: 0;
-    padding: 0;
-    text-decoration: none;
+*, :after, :before {
+    box-sizing: border-box;
 }
 
-/* Apply a font and basic styling */
-body {
-    font-family: 'Arial', sans-serif;
+div {
+    display: block;
+    unicode-bidi: isolate;
+}
+
+html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: var(--font);
+    font-kerning: normal;
+    font-size: 16px;
+    font-weight: 400;
     line-height: 1.6;
-    color: #333;
-    background-color: #f4f4f4; /* Light grey background */
-    padding: 20px;
+}
+
+:root {
+    --main-background: #1d1d1d;
+    --main-text: white;
+    --secondary-text: lightgrey;
+    --border-color: #c9c9c9;
+    --font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1, h2, h3, h4, h5 {
+    color: var(--main-text);
+    font-weight: 600;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    margin-top: 0;
+    scroll-margin-top: 6rem;
+}
+
+body {
+    background: var(--main-background);
+    margin: 0;
+    padding: 0;
+}
+
+.format {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 header {
-    background: #005792; /* A shade of blue */
-    color: white;
-    padding: 20px 40px; /* Adjusted padding for overall header */
+    background: var(--main-background);
+    border-bottom: var(--border-color) 1px solid;
+    height: 80px;
+    left: 0;
+    top: 0;
+    position: fixed;
+    width: 100%;
+    z-index: 3;
 }
 
-.hamburger-menu {
-    display: none; /* Hide by default, will be displayed on mobile */
-    cursor: pointer;
-    font-size: 24px; /* Adjust size as needed */
-    color: white; /* Adjust color as needed */
-}
-
-
-nav {
+header .container {
     display: flex;
-    justify-content: flex-end; /* Aligns the navigation items to the right */
-    align-items: center; /* Centers the items vertically */
+    height: 80px;
+    justify-content: space-between;
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 900px;
+    padding: 0 1rem;
+}
+
+header nav {
+    align-items: center;
+    display: flex;
+    gap: 0.5rem;
+    justify-content: space-between;
+    max-width: 400px;
+    width: 100%;
+}
+
+header a.name {
+    color: var(--main-text);
+    text-decoration: none;
+    align-self: center;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1;
+    padding: 0;
+}
+
+header a.name span {
+    white-space: nowrap;
+}
+
+header .nav-item-div {
+    align-items: center;
+    display: flex;
+    flex: 1 1;
+    justify-content: center;
 }
 
 nav a {
-    color: #FFA500; /* Orange color for the text */
-    font-weight: bold;
-    margin-left: 20px; /* This will give space between each link */
-    padding: 8px 16px; /* Padding to make the links appear as buttons */
-    border-radius: 5px; /* Slightly rounded corners for the links */
-    transition: background-color 0.3s; /* Smooth transition for hover effect */
+    color: var(--secondary-text);
+    text-decoration: none;
+    align-items: center;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    font-size: .9rem;
+    font-weight: 500;
+    gap: .5rem;
+    justify-content: space-between;
+    padding: .6rem .6rem;
+    white-space: nowrap;
 }
 
 nav a:hover {
-    background-color: #ffa5002b; /* Slight orange background on hover */
+    background: transparent;
+    border: var(--border-color) 1px solid;
+    text-decoration: none;
 }
 
-.contact-me {
-    background-color: #FFA500; /* Orange */
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px; /* Rounded corners */
-    transition: background-color 0.3s; /* Smooth transition for hover effect */
+main {
+    flex: 1 1;
 }
 
-.contact-me:hover {
-    background-color: #e69500; /* Darker orange on hover for 'Contact Me' button */
-}
-
-.main {
-    max-width: 900px;
-    margin: 40px auto;
-    padding: 0 20px;
-}
-
-/* Bubble styling with blue and orange accents */
-.bubble {
-    background: #fff;
-    border-radius: 20px;
-    padding: 20px;
-    margin: 20px 0;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
-    transition: all 0.3s ease;
-    overflow: hidden;
-    border-left: 5px solid #005792; /* Blue border on the left */
-}
-
-/* Styling for the introduction section with the image */
-.intro {
-    display: flex;
-    align-items: center;
-    text-align: left;
-    gap: 20px; /* Adjust the space between the image and text */
-}
-
-.intro-left {
-    flex-shrink: 0; /* Prevents the image container from shrinking */
+.intro-bubble {
+    display: grid;
+    padding-top: 2rem;
 }
 
 .intro-right {
-    flex-grow: 1; /* Allows the text container to grow and fill the space */
+    align-items: center;
+    display: flex;
+    order: 1;
 }
 
 .profile-pic {
-    border-radius: 50%; /* Makes the image round */
-    width: 150px; /* Adjust the size as needed */
-    height: 150px; /* Adjust the size as needed */
-    object-fit: cover; /* Ensures the image covers the area without distortion */
+    max-width: 150px;
+    border-radius: 50%;
 }
 
-/* Styling for the featured work section */
+.image {
+    max-width: 100%;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+.intro {
+    order: 2;
+    overflow: hidden;
+    padding: 2rem 0 1rem;
+    position: relative;
+    width: 100%;
+}
+
+h1 {
+    display: block;
+    font-size: 2em;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    unicode-bidi: isolate;
+}
+
+.intro h1 {
+    color: var(--main-text);
+    font-size: 2.2rem;
+    font-weight: 700;
+    line-height: 1.1;
+    margin: 0;
+}
+
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    unicode-bidi: isolate;
+}
+
+p.intro-description {
+    -webkit-font-smoothing: antialiased;
+    color: var(--secondary-text);
+    font-size: 1.1rem;
+    font-weight: 500;
+    line-height: 1.6;
+    margin: 1rem 0;
+}
+
 .featured-work {
     display: flex;
-    flex-direction: column; /* Stack the heading and the work container vertically */
-    align-items: center; /* Center items horizontally */
-    gap: 20px; /* Spacing between the heading and the work container */
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
 }
 
 .work-container {
     display: flex;
-    justify-content: space-evenly; /* Space out the class-work items evenly */
-    flex-wrap: wrap; /* Allow the items to wrap on smaller screens */
-    gap: 20px; /* Spacing between the class-work items */
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 .class-work {
-    width: 4in; /* Set width to 4 inches */
-    height: 4in; /* Set height to 4 inches */
-    flex: none; /* Override the flex-grow, flex-shrink and flex-basis properties */
-    background-size: cover; /* Ensures the background image covers the entire element */
-    background-position: center; /* Centers the background image */
-    overflow: hidden; /* Prevents content from spilling out */
-    display: flex; /* Makes it a flex container to center the content */
-    justify-content: center; /* Centers content horizontally */
-    align-items: center; /* Centers content vertically */
-    border-radius: 10px; /* Rounded corners for the boxes */
-    position: relative; /* For absolute positioning of the description inside */
-    margin: 0 auto; /* Center the boxes in the container if there's extra space */
+    width: 4in;
+    height: 4in;
+    flex: none;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    position: relative;
+    margin: 0 auto;
 }
 
-/* Content that's always visible */
 .content {
     position: absolute;
     width: 100%;
@@ -144,11 +237,10 @@ nav a:hover {
     align-items: center;
     transition: opacity 0.3s ease, visibility 0.3s ease;
     border-radius: 10px;
-    background-color: rgba(255, 255, 255, 0.9); /* Optional: background color for the content */
-    z-index: 1; /* Ensure the content is above the links */
+    background-color: rgba(255, 255, 255, 0.9);
+    z-index: 1;
 }
 
-/* Initially hidden links */
 .links {
     display: none; /* Hide links by default */
     position: absolute;
@@ -161,122 +253,158 @@ nav a:hover {
     justify-content: center;
     align-items: center;
     transition: opacity 0.3s ease, visibility 0.3s ease;
-    background-color: rgba(255, 255, 255, 0.9); /* Optional: background color for the links */
-    z-index: 2; /* Ensure the links appear above the content when shown */
+    background-color: rgba(255, 255, 255, 0.9);
+    z-index: 2;
 }
 
-/* Show links and hide content on hover */
+.content h3 {
+    color: var(--secondary-text);
+}
+
 .class-work:hover .content {
     opacity: 0;
     visibility: hidden;
 }
 
 .class-work:hover .links {
-    display: flex; /* Show links on hover */
+    display: flex;
     opacity: 1;
     visibility: visible;
 }
 
-.cse-15l {
-background-image: linear-gradient(to top, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1)),
-url('https://mapersiani.github.io/home/images/terminal.png'); /* Path to image */
-}
-
 .ece-176 {
 background-image: linear-gradient(to top, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1)),
-url('https://mapersiani.github.io/home/images/deeplearning.png'); /* Path to image */
+url('https://mapersiani.github.io/home/images/deeplearning.png');
 }
 
-.cse-190 {
-background-image: linear-gradient(to top, rgba(255, 255, 255, 0.0), rgba(255, 255, 255, 0.0)),
-url('https://mapersiani.github.io/home/images/qcrypt.png'); /* Path image */
+.cse-110 {
+    background-image: linear-gradient(to top, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1)),
+    url('https://mapersiani.github.io/home/images/terminal.png');
 }
 
 footer {
-text-align: center;
-padding: 20px 0;
-background: #005792; /* Blue background */
-color: white;
-margin-top: 20px; /* Ensures space before the footer */
+    color: var(--secondary-text);
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 20px;
 }
 
-/* Hover effect for bubbles */
 .bubble:hover {
 transform: scale(1.03);
 box-shadow: 0 12px 24px rgba(0,0,0,0.2);
 }
 
-@media only screen and (max-width: 600px) {
-    /* Mobile-specific styles */
+@media screen and (min-width: 700px) {
+    main {
+        margin-top: 6rem;
+    }
+
+    .intro-bubble {
+        align-items: center;
+        gap: 1.5rem;
+        grid-template-columns: 4fr 2fr;
+        padding-top: 0;
+    }
+
+    .intro-right {
+        justify-content: flex-end;
+        order: 2;
+    }
+
+    .profile-pic {
+        max-width: 100%;
+        width: 200px;
+        border-radius: 100px;
+    }
+
+    .intro.left {
+        padding: 5rem 0 3rem;
+    }
+
+    .intro {
+        order: 1;
+        padding: 1.5rem 0 1rem;
+    }
+
+    .intro h1 {
+        font-size: 3rem;
+    }
+
+    p.intro-description {
+        font-size: 1.2rem;
+        margin: 1.5rem 0 0;
+    }
+}
+
+/* @media only screen and (max-width: 600px) {
     .hamburger-menu {
         display: block;
-        /* Additional styling for the hamburger icon */
         position: absolute;
         top: 20px;
         right: 20px;
-        z-index: 100; /* to ensure it's on top of other elements */
+        z-index: 100;
     }
 
     nav {
         display: none;
         position: absolute;
-        top: 60px; /* Adjust as needed */
+        top: 60px;
         right: 0;
-        width: 100%; /* Full width */
-        background: #005792; /* To match header background */
-        z-index: 99; /* Below the hamburger icon */
+        width: 100%;
+        background: #005792;
+        z-index: 99;
     }
 
     nav a, .contact-me {
         padding: 15px 30px;
         font-size: 18px;
-        display: block; /* Stack links vertically */
-        text-align: center; /* Center-align the text */
+        display: block;
+        text-align: center;
     }
     
     .profile-pic {
         width: 100px;
         height: 100px;
-        margin: 0 auto; /* Center the image */
+        margin: 0 auto;
     }
 
     body {
-        font-size: 16px; /* Smaller font size for mobile */
+        font-size: 16px;
     }
 
     h1, h2, h3 {
-        font-size: 1.5em; /* Larger, but not too large */
-        text-align: center; /* Center-align headings */
+        font-size: 1.5em;
+        text-align: center;
     }
 
     .class-work {
-        width: 100%; /* Full width on mobile */
-        margin: 10px 0; /* Adjusted margins */
+        width: 100%;
+        margin: 10px 0;
     }
 
     .class-work .content, .class-work .links {
-        display: block; /* Always visible */
+        display: block;
         opacity: 1;
         visibility: visible;
         position: relative;
         width: auto;
         height: auto;
-        padding: 10px; /* Added padding for touch friendliness */
+        padding: 10px;
     }
 
     .class-work .content h3, .class-work .content p {
-        font-size: 1em; /* Adjust font size for readability */
-        margin-bottom: 10px; /* Space between title, description, and links */
+        font-size: 1em;
+        margin-bottom: 10px;
     }
 
     .class-work .links a {
         display: inline-block;
         margin: 5px;
-        font-size: 0.9em; /* Slightly smaller font size for links */
-        background-color: #f4f4f4; /* Light background for links */
-        color: #005792; /* Link color */
-        padding: 5px 10px; /* Padding for easier touch */
-        border-radius: 5px; /* Rounded corners for aesthetics */
-        text-decoration: none; /* No underline */
+        font-size: 0.9em;
+        background-color: #f4f4f4;
+        color: #005792;
+        padding: 5px 10px;
+        border-radius: 5px;
+        text-decoration: none;
     }
-}
+} */

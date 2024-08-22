@@ -1,76 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Matteo Persiani's Portfolio</title>
-    <link rel="stylesheet" href="styles/style.css">
-    <script defer src="scripts/script.js"></script>
-</head>
-<body>
-    <header>
-        <div class="hamburger-menu">&#9776;</div>
-        <nav>
-            <a href="https://github.com/mapersiani">GitHub</a>
-            <a href="https://www.linkedin.com/in/mapersiani/">LinkedIn</a>
-            <a href="https://docs.google.com/document/d/1eB09fPBAz1pp4A626jb5psUEJghCnta21TBzABMQA6c/edit?usp=sharing">Resume</a>
-            <a href="mailto:persianimatteo@gmail.com" class="contact-me">Contact Me</a>
-        </nav>
-    </header>
-    
-    <main>
-        <div class="intro bubble">
-            <div class="intro-left">
-                <img src="images/tempProfile.jpg" alt="Matteo Persiani" class="profile-pic">
-            </div>
-            <div class="intro-right">
-                <h1>Hi, I’m Matteo Persiani, a Computer Engineer from Sacramento, CA.</h1>
-                <p>I am currently attending Revelle College @ U.C. San Diego and expected to graduate in June 2025</p>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Matteo Persiani's Portfolio</title>
+        <link rel="stylesheet" href="styles/style.css">
+        <script defer src="scripts/script.js"></script>
+    </head>
+    <body>
+        <div>
+            <div id="format" class="format">
+                <header>
+                    <div class="container">
+                        <a class="name" href="/">
+                            <span>Matteo Persiani</span>
+                        </a>
+                        <nav>
+                            <div class="nav-item-div">
+                                <a href="https://github.com/mapersiani">
+                                    <span>GitHub</span>
+                                </a>
+                            </div>
+                            <div class="nav-item-div">
+                                <a href="https://www.linkedin.com/in/mapersiani/">
+                                    <span>LinkedIn</span>
+                                </a>
+                            </div>
+                            <div class="nav-item-div">
+                                <a href="https://docs.google.com/document/d/1eB09fPBAz1pp4A626jb5psUEJghCnta21TBzABMQA6c/edit?usp=sharing">
+                                    <span>Resume</span>
+                                </a>
+                            </div>
+                            <div class="nav-item-div">
+                                <a href="mailto:persianimatteo@gmail.com">
+                                    <span>Contact Me</span>
+                                </a>
+                            </div>
+                        </nav>
+                    </div>
+                </header>
+                
+                <main>
+                    <div>
+                        <div class="container">
+                            <div class="intro-bubble">
+                                <div class="intro-right">
+                                    <img src="images/tempProfile.jpg" alt="Matteo Persiani" class="image profile-pic">
+                                </div>
+                                <div class="intro left">
+                                    <h1>Hi, I'm Matteo</h1>
+                                    <p class="intro-description">I'm currently pursuing my batchelors degree in Computer Engineering from Revelle College @ U.C. San Diego and expect to graduate in June 2025.</p>
+                                    <p class="intro-description">My interests include artificial intelligence, robotics, software development, and design work.</p>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <div class="container">
+                            <section class="featured-work">
+                                <h2>Featured Work</h2>
+                                <div class="work-container">
+                                    <div class="class-work bubble ece-176">
+                                        <div class="content">
+                                            <h3>ECE 176</h3>
+                                            <p>Deep learning final project for Intro to Deep Learning</p>
+                                        </div>
+                                        <div class="links description">
+                                            <a href="https://github.com/crae6/LandmarkClassifier">Landmark Classifier Project</a>
+                                            <p>Details on the project can be found in the pdf project report in the repo.</p>
+                                        </div>
+                                    </div>
+                                    <div class="class-work bubble cse-110">
+                                        <div class="content">
+                                            <h3>CSE 110</h3>
+                                            <p>Group Final Project for Intro to Software Engineering.</p>
+                                        </div>
+                                        <div class="links description">
+                                            <a href="https://github.com/cse110-sp24-group7/cse110-sp24-group7">Developer Journal</a>
+                                            <p>Details on the project can be found in the readme.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                </main>
+                
+                <footer>
+                    <p>Updated 08/22/2024</p>
+                    <a href="https://www.taniarascia.com/">
+                        <span>Inspiration</span>
+                    </a>
+                </footer>
             </div>
         </div>
-        
-        <section class="featured-work">
-            <h2>Featured Work</h2>
-            <div class="work-container">
-                <div class="class-work bubble cse-15l">
-                    <div class="content">
-                        <h3>CSE 15L</h3>
-                        <p>Lab reports made during CSE 15L using markdown. Most of the topics cover gdb and using the terminal</p>
-                    </div>
-                    <div class="links description">
-                        <a href="https://mapersiani.github.io/cse15l-lab-reports/Lab1Report.html">Remote Access</a>
-                        <a href="https://mapersiani.github.io/cse15l-lab-reports/Lab2Report.html">Servers and Bugs</a>
-                        <a href="https://mapersiani.github.io/cse15l-lab-reports/Lab3Report.html">Commands</a>
-                        <a href="https://mapersiani.github.io/cse15l-lab-reports/Lab4Report.html">Baseline Speed Test</a>
-                        <a href="https://mapersiani.github.io/cse15l-lab-reports/Lab5Report.html">Final Test</a>
-                    </div>
-                </div>
-                <div class="class-work bubble ece-176">
-                    <div class="content">
-                        <h3>ECE 176</h3>
-                        <p>Assignments from ECE 176 Intro to Deep Learning. This section will continue to be updated until April 2024</p>
-                    </div>
-                    <div class="links description">
-                        <a href="../ECE176/knn.html">KNN</a>
-                        <a href="https://mapersiani.github.io/ECE176-assignments/linear&logistic_regression.html">Linear & Logistic Regression</a>
-                        <a href="https://mapersiani.github.io/ECE176-assignments/neural_network.html">Neural Network</a>
-                    </div>
-                </div>
-                <div class="class-work bubble cse-190">
-                    <div class="content">
-                        <h3>CSE 190</h3>
-                        <p>Assignments from CSE 190 Intro to Quantum Cryptography. This section will continue to be updated until April 2024</p>
-                    </div>
-                    <div class="links description">
-                        <a href="https://mapersiani.github.io/CSE190-assignments/EPR.html">EPR Representation</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-    
-    <footer>
-        <p>Updated 05/01/2024</p>
-    </footer>
-</body>
+    </body>
 </html>
