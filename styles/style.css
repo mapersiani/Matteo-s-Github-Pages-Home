@@ -364,12 +364,12 @@ p.intro-description {
 
 .ece-176 {
     background-image: linear-gradient(to top, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1)),
-    url('https://mapersiani.github.io/home/images/deeplearning.png');
+    url('../images/deeplearning.png');
 }
 
 .cse-110 {
     background-image: linear-gradient(to top, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1)),
-    url('https://mapersiani.github.io/home/images/terminal.png');
+    url("../images/devJournal.png");
 }
 
 footer {
