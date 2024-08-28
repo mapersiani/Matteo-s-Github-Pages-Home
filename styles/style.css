@@ -61,6 +61,7 @@ header .container {
     display: flex;
     height: 80px;
     justify-content: space-between;
+    padding-top: 0;
 }
 
 .container {
@@ -68,6 +69,7 @@ header .container {
     margin-right: auto;
     max-width: 900px;
     padding: 0 1rem;
+    padding-top: 2.5rem;
 }
 
 header nav {
@@ -290,10 +292,6 @@ p.intro-description {
     border-radius: 6px;
   }
 
-.featured-work {
-    padding-top: 70px;
-}
-
 .work-container {
     display: flex;
     justify-content: space-evenly;
@@ -373,6 +371,10 @@ p.intro-description {
     url("../images/devJournal.png");
 }
 
+.job {
+
+}
+
 footer {
     color: var(--secondary-text);
     text-align: center;
@@ -409,7 +411,7 @@ footer {
     }
 
     .intro.l {
-        padding: 5rem 0 3rem;
+        padding: 5rem 0 0;
     }
 
     .intro {
