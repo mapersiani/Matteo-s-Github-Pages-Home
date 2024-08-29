@@ -121,7 +121,6 @@ nav a {
 nav a:hover {
     background: transparent;
     border: #18b969 2px solid;
-    border: #18b969 2px solid;
     text-decoration: none;
 }
 
@@ -141,17 +140,8 @@ main {
 }
 
 .profile-pic {
-    max-width: 150px;
-    border-radius: 50%;
-}
-
-.image {
-    max-width: 100%;
-}
-
-img {
-    display: block;
-    max-width: 100%;
+    max-width: 200px;
+    border-radius: 100px;
 }
 
 .intro {
@@ -188,6 +178,8 @@ p {
     margin-inline-start: 0px;
     margin-inline-end: 0px;
     unicode-bidi: isolate;
+    color: var(--secondary-text);
+    margin-bottom: 0;
 }
 
 p.intro-description {
@@ -201,12 +193,8 @@ p.intro-description {
 
 .timeline {
     position: relative;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.timeline h3 {
-    color: black;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .timeline::after {
@@ -228,8 +216,8 @@ p.intro-description {
     width: 50%;
   }
   
-  /* The circles on the timeline */
-  .item::after {
+/* The circles on the timeline */
+.item::after {
     content: '';
     position: absolute;
     width: 20px;
@@ -240,20 +228,20 @@ p.intro-description {
     top: 22px;
     border-radius: 50%;
     z-index: 1;
-  }
+}
   
-  /* Place the container to the left */
+/* Place the container to the left */
 .left {
     left: 0;
-  }
+}
   
-  /* Place the container to the right */
-  .right {
+/* Place the container to the right */
+.right {
     left: 50%;
-  }
+}
   
-  /* Add arrows to the left container (pointing right) */
-  .left::before {
+/* Add arrows to the left container (pointing right) */
+.left::before {
     content: " ";
     height: 0;
     position: absolute;
@@ -264,10 +252,10 @@ p.intro-description {
     border: medium solid var(--secondary-text);
     border-width: 10px 0 10px 10px;
     border-color: transparent transparent transparent var(--secondary-text);
-  }
+}
   
-  /* Add arrows to the right container (pointing left) */
-  .right::before {
+/* Add arrows to the right container (pointing left) */
+.right::before {
     content: " ";
     height: 0;
     position: absolute;
@@ -278,113 +266,99 @@ p.intro-description {
     border: medium solid var(--secondary-text);
     border-width: 10px 10px 10px 0;
     border-color: transparent var(--secondary-text) transparent transparent;
-  }
+}
   
-  /* Fix the circle for containers on the right side */
-  .right::after {
+/* Fix the circle for containers on the right side */
+.right::after {
     left: -9px;
-  }
+}
 
-  .tl-item {
+.tl-item {
     padding: 20px 30px;
-    background-color: var(--secondary-text);
     position: relative;
-    border-radius: 6px;
-  }
+    border-radius: 10px;
+    border: 2px solid var(--secondary-text);
+}
 
 .work-container {
     display: flex;
-    justify-content: space-evenly;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 1rem;
 }
 
 .class-work {
-    width: 4in;
-    height: 4in;
-    flex: none;
-    background-size: cover;
-    background-position: center;
-    overflow: hidden;
+    width: 100%;
+    height: 10rem;
     display: flex;
-    justify-content: center;
-    align-items: center;
     border-radius: 10px;
     position: relative;
-    margin: 0 auto;
+    border: 2px solid var(--secondary-text);
+    padding: 10px;
+}
+
+.class-work h3 {
+    margin: 0;
 }
 
 .content {
-    position: absolute;
-    width: 100%;
+    width: 75%;
     height: 100%;
     text-align: center;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    transition: opacity 0.3s ease, visibility 0.3s ease;
-    border-radius: 10px;
-    background-color: var(--secondary-text);
-    z-index: 1;
+    padding: 10px;
 }
 
-.links {
-    display: flex;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    padding: 20px;
-    text-align: center;
-    border-radius: 10px;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    transition: opacity 0.3s ease, visibility 0.3s ease;
-    background-color: var(--secondary-text);
-    z-index: 2;
-}
-
-.content h3 {
-    color: black;
-}
-
-.class-work:hover .content {
+.content .description {
     opacity: 0;
-    visibility: hidden;
+    transition: opacity 0.5s ease;
+    height: 0;
+    overflow: hidden;
 }
 
-.class-work:hover .links {
-    display: flex;
+.project {
+    width: 25%;
+    height: 100%;
+}
+
+.project img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.class-work:hover .description {
     opacity: 1;
-    visibility: visible;
+    height: auto;
 }
 
-.ece-176 {
-    background-image: linear-gradient(to top, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1)),
-    url('../images/deeplearning.png');
+.class-work:hover .class {
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
 }
 
-.cse-110 {
-    background-image: linear-gradient(to top, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1)),
-    url("../images/devJournal.png");
+.jobs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
 }
 
 .job {
+    border: 2px solid var(--secondary-text);
+    border-radius: 10px;
+    padding: 20px;
+    width: 4.25in;
+    height: auto;
+}
 
+.job h3 {
+    margin-bottom: 0;
 }
 
 footer {
     color: var(--secondary-text);
     text-align: center;
     padding: 20px 0;
-    margin-top: 20px;
-}
-
-.bubble:hover {
-    transform: scale(1.03);
-    box-shadow: 0 12px 24px rgba(0,0,0,0.2);
 }
 
 @media screen and (min-width: 700px) {
@@ -411,7 +385,7 @@ footer {
     }
 
     .intro.l {
-        padding: 5rem 0 0;
+        padding: 3rem 0 0;
     }
 
     .intro {
@@ -426,9 +400,5 @@ footer {
     p.intro-description {
         font-size: 1.2rem;
         margin: 1.5rem 0 0;
-    }
-
-    .links {
-        display: none;
     }
 }
