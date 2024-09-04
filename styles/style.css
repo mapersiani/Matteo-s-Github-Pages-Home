@@ -408,3 +408,61 @@ footer {
     margin: 1.5rem 0 0;
   }
 }
+
+/* 
+.mobile {
+  position: relative;
+}
+
+.checkbtn {
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+  display: none;
+}
+
+#check {
+  display: none;
+}
+
+.nav-mobile {
+  display: flex;
+  flex-direction: column;
+  background-color: #333;
+  position: absolute;
+  top: 50px;
+  right: 0;
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in;
+}
+
+.nav-mobile a {
+  color: white;
+  padding: 20px;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+#check:checked ~ .nav-mobile {
+  transform: translateX(0);
+}
+
+@media (min-width: 700px) {
+  .checkbtn {
+    display: block;
+  }
+
+  .nav-mobile {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(51, 51, 51, 0.95);
+  }
+} 
+*/
+
