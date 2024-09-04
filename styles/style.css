@@ -112,7 +112,7 @@ nav a {
   color: var(--secondary-text);
   text-decoration: none;
   align-items: center;
-  border: 1px solid transparent;
+  border: 2px solid transparent;
   border-radius: 10px;
   cursor: pointer;
   display: flex;
@@ -126,7 +126,7 @@ nav a {
 
 nav a:hover {
   background: transparent;
-  border: #18b969 2px solid;
+  border-color: #18b969;
   text-decoration: none;
 }
 
